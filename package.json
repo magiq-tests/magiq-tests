@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "json2module package.json > src/package.js && rollup -c"
-  },
+  },  
   "devDependencies": {
     "html-minifier": "3",
     "jquery": "^3.3.1",
@@ -20,5 +20,6 @@
     "rollup-pluginutils": "2",
     "rollup-watch": "4",
     "uglify-js": "3"
-  }
+  },
+  "author": "Parashar Sangle - https://github.com/Aqua-4"
 }
