@@ -1,0 +1,12 @@
+# Ignore generated files
+dist/
+src/package.js
+test/tape.js
+
+# Ignore node related items
+node_modules/
+npm-debug.log
+yarn.lock
+
+# Ignore editor files
+.vscode/

@@ -1,0 +1,15 @@
+//Generic
+export { colorFillCheck } from './src/generic/color-test.js'
+export { colorStrokeCheck } from './src/generic/color-test.js'
+export { containerTextWrapCheck } from './src/generic/containerwrap-test.js'
+export { countCheck } from './src/generic/count-test.js'
+export { svgDimensionCheck } from './src/generic/dimension-test.js'
+export { genericTests } from './src/generic/generic-test.js'
+export { horizontalOverlapCheck } from './src/generic/horizontaloverlap-test.js'
+export { noDataCheck } from './src/generic/nodata-test.js'
+export { plotBoundaryCheck } from './src/generic/plotboundary-test.js'
+export { textCheck } from './src/generic/text-test.js'
+export { textAlignCheck } from './src/generic/textalign-test.js'
+export { textWrapCheck } from './src/generic/textwrap-test.js'
+export { verticalOverlapCheck } from './src/generic/verticaloverlap-test.js'
+
