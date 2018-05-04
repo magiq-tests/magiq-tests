@@ -5,10 +5,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/surevs/magiq-tests"
+    "url": "https://github.com/magiq-tests/magiq-tests"
   },
   "scripts": {
-    "build": "json2module package.json > src/package.js && rollup -c"
+    "build": "rimraf dist && json2module package.json > src/package.js && rollup -c",
+    "dev": "rimraf dist && json2module package.json > src/package.js && rollup -c -w"
   },  
   "devDependencies": {
     "html-minifier": "3",
