@@ -1,6 +1,6 @@
 {
   "name": "magiq-tests",
-  "version": "0.0.6beta",
+  "version": "0.0.7beta",
   "description": "Library for testing visuals",
   "main": "index.js",
   "license": "MIT",
