@@ -1,5 +1,4 @@
 # Ignore generated files
-dist/
 src/package.js
 test/tape.js
 
