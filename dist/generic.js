@@ -93,8 +93,8 @@ function svgDimensionCheck(selector, height, width) {
   width = width || 500;
   
   test('check SVG height and width', function (assert) {
-    assert.equal(height, parseInt($(selector).attr('height')), "height");
-    assert.equal(width, parseInt($(selector).attr('width')), "width");
+    assert.equal(height, parseInt($(selector).css('height')), "height");
+    assert.equal(width, parseInt($(selector).css('width')), "width");
     assert.end();
   });
 
@@ -273,6 +273,17 @@ function verticalOverlapCheck(selector) {
   });
 }
 
+function getRandomInt(min, max) {
+  if (min == null || max == null) { min = 0; max = 100; }
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomString() {
+  var text = ""; var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  for (var i = 0; i < getRandomInt(); i++) { text += possible.charAt(Math.floor(Math.random() * possible.length)); }
+  return text;
+}
+
 //Generic
 
 exports.colorFillCheck = colorFillCheck;
@@ -288,6 +299,8 @@ exports.textCheck = textCheck;
 exports.textAlignCheck = textAlignCheck;
 exports.textWrapCheck = textWrapCheck;
 exports.verticalOverlapCheck = verticalOverlapCheck;
+exports.getRandomInt = getRandomInt;
+exports.getRandomString = getRandomString;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
