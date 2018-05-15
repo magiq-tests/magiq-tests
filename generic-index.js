@@ -12,4 +12,6 @@ export { textCheck } from './src/generic/text-test.js'
 export { textAlignCheck } from './src/generic/textalign-test.js'
 export { textWrapCheck } from './src/generic/textwrap-test.js'
 export { verticalOverlapCheck } from './src/generic/verticaloverlap-test.js'
+export { getRandomInt } from './src/generic/random-data.js'
+export { getRandomString } from './src/generic/random-data.js'
 
