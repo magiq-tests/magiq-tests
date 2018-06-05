@@ -1,6 +1,6 @@
 {
   "name": "magiq-tests",
-  "version": "0.0.8beta",
+  "version": "0.0.1",
   "description": "Library for testing visuals",
   "main": "index.js",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "build": "rimraf dist && json2module package.json > src/package.js && rollup -c",
     "dev": "rimraf dist && json2module package.json > src/package.js && rollup -c -w",
     "prepublish": "rimraf dist && json2module package.json > src/package.js && rollup -c"
-  },  
+  },
   "devDependencies": {
     "html-minifier": "3",
     "jquery": "^3.3.1",
