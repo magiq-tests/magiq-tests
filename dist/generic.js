@@ -7,16 +7,16 @@
 function colorFillCheck(selector,myColor) {
 // check fill color aqgainst color
   selector = selector || "svg";
-  myColor = myColor || "Black";
-
+  // myColor = myColor || "#000"
 
   test('check color-fill for ' + selector, function (t) {
 
     $(selector).each(function () {
       var fill = ($(this).attr("fill")) || ($(this).css("fill"));
-      t.ok(fill, "Color-Fill = " + fill);
       if(myColor){
         t.equal(fill, myColor, "Color-Fill = " + fill);
+      }else{
+        t.ok(fill, "Color-Fill = " + fill);
       }
     });
 
@@ -28,15 +28,16 @@ function colorFillCheck(selector,myColor) {
 function colorStrokeCheck(selector,myColor) {
 
   selector = selector || "svg";
-  myColor = myColor || "Black";
+  // myColor = myColor || "Black"
 
   test('check color-stroke for ' + selector, function (t) {
 
     $(selector).each(function () {
       var stroke = ($(this).attr("stroke")) || ($(this).attr("stroke"));
-      t.ok(stroke, "Color-Stroke = " + stroke);
       if(myColor){
         t.equal(stroke, myColor, "Color-Stroke = " + stroke);
+      }else{
+        t.ok(stroke, "Color-Stroke = " + stroke);
       }
     });
 
@@ -79,8 +80,8 @@ function countCheck(selector, count) {
   selector = selector || "g";
   var numOfBars = count || 0;
   test("check number "+selector, function (t) {
-    var count =$(selector).size();
-    t.ok(count, count+"<- count vs data.len() ->"+numOfBars);
+    var count =$(selector).length;
+    t.equal(count, numOfBars,count+"<- count vs data.len() ->"+numOfBars);
     t.end();
   });
 
