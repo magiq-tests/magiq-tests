@@ -3,8 +3,8 @@ export function countCheck(selector, count) {
   selector = selector || "g"
   var numOfBars = count || 0
   test("check number "+selector, function (t) {
-    var count =$(selector).size()
-    t.ok(count, count+"<- count vs data.len() ->"+numOfBars);
+    var count =$(selector).length
+    t.equal(count, numOfBars,count+"<- count vs data.len() ->"+numOfBars);
     t.end();
   });
 
