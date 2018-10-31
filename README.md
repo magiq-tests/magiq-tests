@@ -10,5 +10,5 @@
 
 # How to use:
 
-1. Include / Require tape.js, underscore.js, jQuery
+1. Include / Require tape.js, underscore.js OR lodash.js, jQuery
 2. Inlcude library for the visual you want to test.
