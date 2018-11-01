@@ -1,6 +1,6 @@
 {
   "name": "magiq-tests",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "Library for testing visuals",
   "main": "index.js",
   "license": "MIT",
@@ -14,10 +14,10 @@
     "prepublish": "rimraf dist && json2module package.json > src/package.js && rollup -c"
   },
   "devDependencies": {
-    "html-minifier": "3",
-    "jquery": "^3.3.1",
-    "json2module": "^0.0.3",
-    "rimraf": "2",
+    "html-minifier": "latest",
+    "jquery": "latest",
+    "json2module": "latest",
+    "rimraf": "latest",
     "rollup": "0.52",
     "rollup-plugin-uglify": "2",
     "rollup-pluginutils": "2",
