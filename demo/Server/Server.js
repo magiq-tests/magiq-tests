@@ -4,7 +4,14 @@ const express = require('express')
 
 var glob = require("glob")
 
-var paths = []
+var paths = [
+    // "test_pages/area-plot.html",
+    // 'test_pages/horizontal-bar-chart.html',
+    // 'india-map.html',
+    // 'test_pages/sankey-chart.html',
+    // 'test_pages/tree-map.html',
+    // 'test_pages/world-map.html'
+]
 
 glob("test_pages/*.html", function (er, files) {
     paths = (files)
@@ -26,12 +33,12 @@ const server = app.listen(port, function () {
         (async () => {
             const puppeteer = require('puppeteer')
             const browser = await puppeteer.launch({
-                // headless: false,                    // Headless: False will open browser
+                // headless: false                    // Headless: False will open browser
                 args: ['--no-sandbox', '--disable-setuid-sandbox']
             })
             const page = await browser.newPage()
             console.log("page", paths)
-            page.on('console', msg => console.log(msg.text))
+            page.on('console', msg => console.log(msg.text()))
 
             for (let i = 0; i < paths.length; i++) {
 
@@ -41,7 +48,7 @@ const server = app.listen(port, function () {
                     await page.goto(url)
                     await page.waitForFunction('window.renderComplete');
                 } catch (err) {
-                    console.log("Port In use"+err);
+                    console.log("Port In use" + err);
                 }
             }
 
