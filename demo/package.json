@@ -1,0 +1,25 @@
+{
+    "name": "magiq-test-demo-server",
+    "version": "1.0.0",
+    "description": "Demo to implement magiq-test on visual",
+    "scripts": {
+        "test": "node Server/server.js run | tap-spec"
+    },
+    "main": ".eslintrc.js",
+    "dependencies": {
+        "jquery": "latest",
+        "lodash": "latest",
+        "tape": "^4.9.0",
+        "express": "^4.16.3",
+        "glob": "^7.1.2",
+        "puppeteer": "^1.4.0",
+        "tap-spec": "^4.1.1",
+        "util": "^0.10.3",
+        "magiq-tests": "latest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/magiq-tests/magiq-tests/tree/master/demo"
+    },
+    "author": "Parashar Sangle - https://github.com/Aqua-4"
+}
